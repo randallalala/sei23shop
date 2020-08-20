@@ -12,12 +12,21 @@ export default class Item extends Component {
 
   render() {
     return (
-      <Col md="4">
+      <Col md="4" className="mb-3">
         <Card>
           <Card.Img variant="top" src={this.props.item.imgurl} />
-          <button onClick={this.showPriceInformation} className="showPrice">
-            show price
-          </button>
+          {/* <img src={this.props.item.imgurl} /> */}
+          <Card.Body>
+            <Card.Subtitle>{this.props.item.name}</Card.Subtitle>
+
+            <button onClick={this.showPriceInformation} className="showPrice">
+              show price
+            </button>
+            <button onClick={this.showPriceInformation} className="showPrice">
+              Add To Cart
+            </button>
+          </Card.Body>
+
           {this.state.show && (
             <div className="itemPrice">{this.props.item.price}</div>
           )}
