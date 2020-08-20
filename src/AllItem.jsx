@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Item from "./Item";
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Cart from "./Cart";
 
 class AllItem extends Component {
@@ -59,9 +59,13 @@ class AllItem extends Component {
   };
 
   addToCart = (id) => {
-    console.log(id);
+    // console.log(id);
+    // console.log(this.state.items[id]);
 
-    console.log(this.state.items[id]);
+    let temp = { ...this.state };
+
+    temp.cart.push(temp.items[id]);
+    this.setState(temp);
   };
 
   render() {
@@ -71,9 +75,19 @@ class AllItem extends Component {
         <Container>
           <div>All Items</div>
           <Row>
-            {this.state.items.map((item, i) => (
-              <Item addToCart={this.addToCart} item={item} itemId={i} key={i} />
-            ))}
+            <Col md={3}>Put your fullcartinfo here</Col>
+            <Col md={9}>
+              <Row>
+                {this.state.items.map((item, i) => (
+                  <Item
+                    addToCart={this.addToCart}
+                    item={item}
+                    itemId={i}
+                    key={i}
+                  />
+                ))}
+              </Row>
+            </Col>
           </Row>
         </Container>
       </div>
