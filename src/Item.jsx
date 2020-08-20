@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { Card, Col } from "react-bootstrap";
 export default class Item extends Component {
   state = {
     show: false,
@@ -12,15 +12,17 @@ export default class Item extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Item</h1>
-        <button onClick={this.showPriceInformation} className="showPrice">
-          show price
-        </button>
-        {this.state.show && (
-          <div className="itemPrice">{this.props.item.price}</div>
-        )}
-      </div>
+      <Col md="4">
+        <Card>
+          <Card.Img variant="top" src={this.props.item.imgurl} />
+          <button onClick={this.showPriceInformation} className="showPrice">
+            show price
+          </button>
+          {this.state.show && (
+            <div className="itemPrice">{this.props.item.price}</div>
+          )}
+        </Card>
+      </Col>
     );
   }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Item from "./Item";
+import { Container, Row } from "react-bootstrap";
 
 class AllItem extends Component {
   state = {
@@ -57,10 +58,14 @@ class AllItem extends Component {
   render() {
     return (
       <div class="AllItem">
-        <div>All Items</div>
-        {this.state.items.map((item, i) => (
-          <Item item={item} key={i} />
-        ))}
+        <Container>
+          <div>All Items</div>
+          <Row>
+            {this.state.items.map((item, i) => (
+              <Item item={item} key={i} />
+            ))}
+          </Row>
+        </Container>
       </div>
     );
   }

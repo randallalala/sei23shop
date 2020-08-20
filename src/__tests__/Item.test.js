@@ -40,5 +40,10 @@ describe("<Item /> check", () => {
     let price = ItemWrapper.prop("item").price;
     //check whats in the div with class .itemPrice
     expect(Number(ItemWrapper.find(".itemPrice").text())).toBe(price);
+    // expect(Number(ItemWrapper.find(".itemPrice").text())).toBe(price);
+    // expect(Number(ItemWrapper.find(".itemPrice").text())).toBe(price);
+    // expect(Number(ItemWrapper.find(".itemPrice").text())).toBe(price);
+    // expect(Number(ItemWrapper.find(".itemPrice").text())).toBe(price);
+    // expect(Number(ItemWrapper.find(".itemPrice").text())).toBe(price);
   });
 });
