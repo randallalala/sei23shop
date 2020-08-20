@@ -17,7 +17,9 @@ export default class Item extends Component {
         <button onClick={this.showPriceInformation} className="showPrice">
           show price
         </button>
-        {this.state.show && <div className="itemPrice">price</div>}
+        {this.state.show && (
+          <div className="itemPrice">{this.props.item.price}</div>
+        )}
       </div>
     );
   }
