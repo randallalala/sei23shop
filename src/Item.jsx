@@ -10,6 +10,12 @@ export default class Item extends Component {
     // this.setState(prevState => ({show : !prevState.show}))
   };
 
+  addItemToCart = (e) => {
+    this.props.addToCart(e.target.id);
+    // this.setState({ show: !this.state.show });
+    // this.setState(prevState => ({show : !prevState.show}))
+  };
+
   render() {
     return (
       <Col md="4" className="mb-3">
@@ -22,7 +28,11 @@ export default class Item extends Component {
             <button onClick={this.showPriceInformation} className="showPrice">
               show price
             </button>
-            <button onClick={this.showPriceInformation} className="showPrice">
+            <button
+              onClick={this.addItemToCart}
+              id={this.props.itemId}
+              className="showPrice"
+            >
               Add To Cart
             </button>
           </Card.Body>
