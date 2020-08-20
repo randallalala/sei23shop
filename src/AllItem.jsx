@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Item from "./Item";
 import { Container, Row, Col } from "react-bootstrap";
 import Cart from "./Cart";
+import CartFullInfo from "./CartFullInfo";
 
 class AllItem extends Component {
   state = {
@@ -56,6 +57,7 @@ class AllItem extends Component {
       },
     ],
     cart: [],
+    showCart: false,
   };
 
   addToCart = (id) => {
@@ -68,15 +70,25 @@ class AllItem extends Component {
     this.setState(temp);
   };
 
+  showCart = () => {
+    if (this.state.cart.length) {
+      this.setState({ showCart: !this.state.showCart });
+    }
+  };
+
   render() {
     return (
       <div className="AllItem">
-        <Cart items={this.state.cart} />
+        <Cart items={this.state.cart} showCart={this.showCart} />
         <Container>
           <div>All Items</div>
           <Row>
-            <Col md={3}>Put your fullcartinfo here</Col>
-            <Col md={9}>
+            <Col
+              style={{
+                transition: "all 1s ease",
+              }}
+              md={this.state.showCart && this.state.cart.length ? "9" : "12"}
+            >
               <Row>
                 {this.state.items.map((item, i) => (
                   <Item
@@ -88,6 +100,11 @@ class AllItem extends Component {
                 ))}
               </Row>
             </Col>
+            {this.state.showCart && (
+              <Col md={3}>
+                <CartFullInfo items={this.state.cart} />
+              </Col>
+            )}
           </Row>
         </Container>
       </div>

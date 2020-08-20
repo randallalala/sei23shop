@@ -6,10 +6,10 @@ function CartFullInfo(props) {
     <div>
       {props.items.map((item, i) => (
         <Row key={i}>
-          <Col>
+          <Col md="3">
             <Image src={item.imgurl} width={50} height={50} roundedCircle />
           </Col>
-          <Col>{item.name}</Col>
+          <Col md="9">{item.name}</Col>
         </Row>
       ))}
     </div>

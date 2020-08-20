@@ -5,6 +5,7 @@ export default class Cart extends Component {
     return (
       <div>
         <h1>Cart {this.props.items.length}</h1>
+        <button onClick={this.props.showCart}>show cart</button>
       </div>
     );
   }
