@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/sei23shop/static/css/main.533350b4.chunk.css",
+    "main.js": "/sei23shop/static/js/main.a093eac5.chunk.js",
+    "main.js.map": "/sei23shop/static/js/main.a093eac5.chunk.js.map",
+    "runtime-main.js": "/sei23shop/static/js/runtime-main.d0965ef4.js",
+    "runtime-main.js.map": "/sei23shop/static/js/runtime-main.d0965ef4.js.map",
+    "static/css/2.11829350.chunk.css": "/sei23shop/static/css/2.11829350.chunk.css",
+    "static/js/2.ee657cd9.chunk.js": "/sei23shop/static/js/2.ee657cd9.chunk.js",
+    "static/js/2.ee657cd9.chunk.js.map": "/sei23shop/static/js/2.ee657cd9.chunk.js.map",
+    "index.html": "/sei23shop/index.html",
+    "precache-manifest.1817376663fd32c7badc4124f603cca2.js": "/sei23shop/precache-manifest.1817376663fd32c7badc4124f603cca2.js",
+    "service-worker.js": "/sei23shop/service-worker.js",
+    "static/css/2.11829350.chunk.css.map": "/sei23shop/static/css/2.11829350.chunk.css.map",
+    "static/css/main.533350b4.chunk.css.map": "/sei23shop/static/css/main.533350b4.chunk.css.map",
+    "static/js/2.ee657cd9.chunk.js.LICENSE.txt": "/sei23shop/static/js/2.ee657cd9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d0965ef4.js",
+    "static/css/2.11829350.chunk.css",
+    "static/js/2.ee657cd9.chunk.js",
+    "static/css/main.533350b4.chunk.css",
+    "static/js/main.a093eac5.chunk.js"
+  ]
+}
